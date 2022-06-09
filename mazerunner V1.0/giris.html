@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Press Start 2P", cursive;
+        }
+        
+        body,
+        html {
+            height: 30%;
+        }
+        
+        body {
+            /* The image used */
+            background-image: url("image/player_down.png");
+            /* Full height */
+            height: 30%;
+            /* Center and scale the image nicely */
+        }
+        
+        #btn1 {
+            background-color: rgb(102, 54, 54);
+            margin-left: 20%;
+            color: white;
+            margin-top: 15%;
+            height: 100px;
+            width: 400px;
+            font-size: 25px;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+        
+        #btn2 {
+            background-color: rgb(102, 54, 54);
+            margin-left: 35%;
+            color: white;
+            margin-top: 0%;
+            height: 100px;
+            width: 400px;
+            font-size: 25px;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+        
+        #btn3 {
+            background-color: rgb(102, 54, 54);
+            margin-left: 50%;
+            color: white;
+            margin-top: 0%;
+            height: 100px;
+            width: 400px;
+            font-size: 25px;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <audio autoplay="autoplay" id="audio-player" style="display: none">
+      <source src="audio/htf.mp3" />
+
+      Tarayıcız audio tagını desteklemiyor...
+    </audio>
+
+    <button id="btn1" onClick="oyna()">Music</button><br />
+
+    <button id="btn2" onClick="">Play</button><br />
+
+    <button id="btn3" onClick="">Who We Are ?</button><br />
+
+    <script type="text/javascript">
+        var player = document.getElementById("audio-player"); //playera eriştik
+
+        function oyna() {
+            //oyna fonksiyonu çağırılırsa
+
+            if (player.paused) {
+                //eğer çalmıyosa
+
+                player.play(); //çal
+            } else {
+                player.pause(); //çalıyosa durdur
+            }
+        }
+
+        document.getElementById("btn2").onclick = function() {
+            window.setTimeout(function() {
+                location.href = "index.html";
+            }, 1500);
+        };
+
+        var e = document.getElementById("btn3");
+
+        e.addEventListener(
+            "click",
+            function() {
+                alert("We are the Space !");
+            },
+            false
+        );
+    </script>
+</body>
+
+</html>

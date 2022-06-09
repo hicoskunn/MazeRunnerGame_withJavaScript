@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MAZE-RUNNER</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <button onclick="play()" id="btn-start">START</button>
+        <audio loop id="y">
+        <source src="audio/bomberman.mp3" type="audio/mpeg" />
+      </audio>
+        <h1>MAZE RUNNER</h1>
+
+        <div class="table1">
+
+        <span id="spanlevel">LEVEL :
+          <p id="level"></p>
+        </span>
+
+        <span id="spanscore">SCORE :
+          <p id="score"></p>
+        </span>
+
+        </div>
+
+        <div class="table2">
+
+        <span>TIME :
+          <p id="time"></p>
+        </span>
+
+        <span>GOAL SCORE:
+          <p id="score-goal"></p>
+        </span>
+
+        </div>
+
+    
+
+        <center>
+            <p id="game-over">GAME OVER</p>
+        </center>
+        <center>
+            <p id="game-win">YOU WIN</p>
+        </center>
+    </div>
+
+    <script>
+        function play() {
+            y.play();
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
